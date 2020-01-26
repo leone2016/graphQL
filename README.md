@@ -1,5 +1,7 @@
+<p align="center">
+  <a href="#" target="blank"><img src="https://graphql.org/img/logo.svg" width="320" alt="Nest Logo" /></a>
+</p>
 
-![GraphQL](https://graphql.org/img/logo.svg)
 # GrapQL Course
 
 ## section 1 Introduction to the Course 
@@ -250,3 +252,29 @@ desinstalar las dependencias de express graphql
 
     $ npm uninstall express-graphql
     $ npm i apollo-server-express
+    
+    
+# Section 6: Academia Online
+    $ npm init
+        package name: academia-online
+        version: (1.0.0)
+        description: Api graphQL academia online
+        entry point: (index.js) build/server.js
+        text command:
+        gir repository: 
+        keywords:
+        author: Leonardo Medina <leomedinae.sc@gmail.com> (leonardomeidna.com.ec)
+    $ npx tsc --init --rootDir src --outDir build --lib dom,es6 --module commonjs  --target es6 --removeComments --resolveJsonModule
+
+### Dependencias de producción:
+    $ npm install express graphql ncp http graphql-import-node compression cors lodash typescript graphql-tools graphql-playground-middleware-express apollo-server-express
+###Dependencias de desarrollo:
+    $ npm install @types/compression @types/express @types/cors @types/lodash @types/node @types/graphql -D
+
+
+## COSAS RANDOM 
+
+https://www.npmjs.com/package/class-validator
+
+    netstat -ano | findstr :yourPortNumber
+    taskkill /PID typeyourPIDhere /F
