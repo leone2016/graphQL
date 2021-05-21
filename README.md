@@ -18,7 +18,7 @@
 * movies which Luke Skywalker appears
 
 example
-````Json
+````
 {
   person(personID: 1) {
     name
@@ -39,7 +39,7 @@ example
 ### The importance of schema graphQL 
 
 * It's the core of any implementation of graphql server
-* Without this, it's no possible to buil an api of grapql
+* Without this, it's not possible to build an api of grapql
 * It's the hard part of the proyect 
 * We distance of the philosophy of the Apis rest 
 
@@ -50,8 +50,8 @@ example
     * Query: sql queries 
     * Mutation: DB modification
     * Subscription: real time listening on server
-* The types of root determine the place inside sistem of types where it begin this operation
-* Must be provided a root operation  and most be of type object
+* The types of root determine the place inside sistem of types where it begins this operation
+* Must be provided a root operation and most be of type object
 * **MUTATION AND SUBSCRIPTION** are opcional, ( type OBJECT )
   
 # General Set of conventions 
@@ -64,8 +64,8 @@ example
 
 ### Tipos escalares
 * Datos primitivos que pueden almacenar un solo valor 
-* conlos tipos de objetos y tipo de raiz imprescindibles
-* define mayoríia de las propiedades de las entidades
+* con los tipos de objetos y tipo de raiz imprescindibles
+* define mayoría de las propiedades de las entidades
  
 ### Tipos Predeterminados
 * int
@@ -93,6 +93,29 @@ Eg
 
 * entidades con las que modelamos y estructuramos los servicios
 * objetos personalizados que de
+
+> MODIFICADORES DE TIPOS: lista con valor requerido
+
+* Lista NO NULA, pero valores PUEDEN SERLO
+* El valor de la lista no puede ser nulo (null)
+
+````consola
+type Profesor {
+    nombre: String!
+    cursos: [String!]
+}
+````
+> Lista y valor requerido/obligatorio
+
+````consola
+type Profesor {
+    nombre: String!
+    cursos: [String!]!
+}
+````
+
+### Interfaces
+Son definiciones abstractas de atributos comunes para poder obligar
 
 # sección 3: GraphQL - Type system, squemas atravez de tipos
 
